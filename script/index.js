@@ -204,3 +204,61 @@ const handleScrollAnimation = () => {
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
 });
+
+
+
+
+
+const slidesWrapper = document.querySelector('.sslides-wrapper');
+const slides = document.querySelectorAll('.sslide');
+const dotContainer = document.querySelector('.manual-dots');
+
+// Create dots dynamically
+slides.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dotContainer.appendChild(dot);
+
+  dot.addEventListener('click', () => {
+    const slideWidth = slides[i].offsetWidth + 20; // width + gap
+    slidesWrapper.scrollTo({ left: slideWidth * i, behavior: 'smooth' });
+    updateDots(i);
+  });
+});
+
+const dot = document.querySelectorAll('.dot');
+
+// Update dots on manual scroll
+slidesWrapper.addEventListener('scroll', () => {
+  const scrollLeft = slidesWrapper.scrollLeft;
+  const slideWidth = slides[0].offsetWidth + 20;
+  const index = Math.round(scrollLeft / slideWidth);
+  updateDots(index);
+});
+
+function updateDots(index) {
+  dot.forEach(dot => dot.classList.remove('active'));
+  if (dots[index]) dots[index].classList.add('active');
+}
+
+
+
+// Animate slides when they come into view
+const observerOptions = {
+  root: slidesWrapper,
+  rootMargin: '0px',
+  threshold: 0.5 // half of slide must be visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, observerOptions);
+
+slides.forEach(slide => observer.observe(slide));

@@ -771,3 +771,96 @@ footer {
     border: 1px solid #ccc;
 }
 
+
+
+
+
+
+
+.featured-collections {
+  background-color: #fdf6f0; /* soft, luxury pastel */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured-collections .section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  color: #ff4d6d;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.featured-collections .section-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+/* Slider */
+.manual-sslider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.sslides-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.sslides-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.sslide {
+  min-width: 250px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sslide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Dots */
+.manual-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.manual-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 77, 109, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manual-dots .dot.active {
+  background-color: #ff4d6d;
+  width: 14px;
+  height: 14px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
