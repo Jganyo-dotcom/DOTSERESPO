@@ -147,3 +147,23 @@ text.split('').forEach((char, i) => {
     span.style.animationDelay = `${i * 0.05}s`; // stagger each letter
     heading.appendChild(span);
 });
+
+
+
+
+
+const searchIcon = document.querySelector('.search-icon');
+const searchPanel = document.querySelector('.search-panel');
+const backArrow = document.querySelector('.back-arrow');
+
+// Open search panel
+searchIcon.addEventListener('click', () => {
+  searchPanel.classList.add('active');
+  searchIcon.classList.add('hidden');
+});
+
+// Close search panel
+backArrow.addEventListener('click', () => {
+  searchPanel.classList.remove('active');
+  searchIcon.classList.remove('hidden');
+});

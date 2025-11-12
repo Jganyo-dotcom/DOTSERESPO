@@ -51,7 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 40vh;
     background:  url('../images/hero.webp') center/cover no-repeat;
     color: #fff;
     text-align: center;
@@ -463,7 +463,7 @@ footer {
     }
 
     .hero {
-        height: 70vh;
+        height: 40vh;
         padding: 0 20px;
     }
 
@@ -648,4 +648,73 @@ footer {
     100% { opacity: 1; }
 }
 
+
+
+
+
+
+
+
+
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  top: 20px;
+  right: 7px;
+  font-size: 18px;
+  color: red; /* temporary for visibility */
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+/* Search Panel */
+.search-panel {
+  position: fixed;
+  top: 0;
+  right: -100%; /* hidden initially */
+  width: 350px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease;
+  padding: 20px;
+}
+
+/* Search Panel Active */
+.search-panel.active {
+  right: 0;
+}
+
+/* Back Arrow and Input */
+.search-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-header .back-arrow {
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-header input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 1em;
+  outline: none;
+}
+
+/* Optional: fade the magnifier when hidden */
+.search-icon.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
