@@ -302,6 +302,7 @@ footer {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    z-index: 999;
 }
 
 .hamburger span {
@@ -320,21 +321,21 @@ footer {
 
     .nav-links {
         position: fixed;
-        right: -100%;
+        left: -100%;
         top: 0;
         height: 100vh;
         width: 60%;
-        background-color: #fff;
+        background-color: white;
         flex-direction: column;
         padding-top: 80px;
         gap: 30px;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        transition: right 0.3s ease-in-out;
+        transition: left 0.3s ease-in-out;
         z-index: 999;
     }
 
     .nav-links.active {
-        right: 0;
+        left: 0;
     }
 
     .nav-links li {
@@ -380,6 +381,8 @@ footer {
     transition: all 0.3s ease;
 }
 
+.close
+
 .close:hover {
     background: #ff4d6d;
     color: #fff;
@@ -413,7 +416,7 @@ footer {
 
 
     .nav-links {
-    z-index: 1100; /* higher than modal */
+    z-index: 100; /* higher than modal */
 }
 
 
@@ -511,6 +514,14 @@ footer {
         padding: 10px;
         font-size: 0.9em;
     }
+
+    /* Hamburger Menu */
+.hamburger {
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 999;
+}
 }
 
 
