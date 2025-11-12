@@ -11,11 +11,7 @@ modalButtons.forEach(btn => {
     });
 });
 
-closeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.closest(".modal").style.display = "none";
-    });
-});
+
 
 // Close modal when clicking outside content
 window.addEventListener("click", (e) => {
@@ -63,10 +59,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 
-    closeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.closest(".modal").style.display = "none";
-    });
-});
+    
+
+let close_MODAL = document.querySelector(".close").addEventListener("click",()=>{
+         hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+})
 
 });
