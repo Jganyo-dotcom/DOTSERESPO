@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Paradise</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+    <div class="logo">Perfume Paradise</div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+         <span class="close">&times;</span>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="about.html">AboutI</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Perfume Paradise</h1>
+        <p>Discover your signature scent today</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Perfumes</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/perfume1.jpg" alt="Perfume 1">
+                <h3>Floral Essence</h3>
+                <p>GHC 150</p>
+                <button class="btn modal-btn" data-modal="modal1">View Details</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/perfume2.jpg" alt="Perfume 2">
+                <h3>Ocean Breeze</h3>
+                <p>GHC 180</p>
+                <button class="btn modal-btn" data-modal="modal2">View Details</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/perfume3.jpg" alt="Perfume 3">
+                <h3>Luxury Night</h3>
+                <p>GHC 220</p>
+                <button class="btn modal-btn" data-modal="modal3">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/perfume1.jpg" alt="Perfume 1">
+            <h3>Floral Essence</h3>
+            <p>A fresh floral scent that captures elegance and grace.</p>
+            <p>Price: GHC 150</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/perfume2.jpg" alt="Perfume 2">
+            <h3>Ocean Breeze</h3>
+            <p>A refreshing aquatic scent perfect for summer vibes.</p>
+            <p>Price: GHC 180</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/perfume3.jpg" alt="Perfume 3">
+            <h3>Luxury Night</h3>
+            <p>An intense, long-lasting fragrance for special evenings.</p>
+            <p>Price: GHC 220</p>
+        </div>
+    </div>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Send us a message or visit our store.</p>
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Perfume Paradise. All rights reserved.</p>
+</footer>
+
+    <script src="script/index.js"></script>
+</body>
+</html>
