@@ -167,3 +167,40 @@ backArrow.addEventListener('click', () => {
   searchPanel.classList.remove('active');
   searchIcon.classList.remove('hidden');
 });
+
+
+
+
+// Select all elements to animate
+const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+const elementInView = (el, offset = 0) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return (
+        elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
+    );
+};
+
+const displayScrollElement = (element) => {
+    element.classList.add('active');
+};
+
+const hideScrollElement = (element) => {
+    element.classList.remove('active');
+};
+
+const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+        if (elementInView(el, 100)) {
+            displayScrollElement(el);
+        } 
+        // optional: hide when scrolled out of view
+        // else {
+        //     hideScrollElement(el);
+        // }
+    });
+};
+
+window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+});

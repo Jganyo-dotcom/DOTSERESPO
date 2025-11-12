@@ -656,65 +656,118 @@ footer {
 
 
 
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styles */
+.showcase-buttons {
+    text-align: center;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+}
+
+.outline-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: 2px solid #ff4d6d;
+    background: transparent;
+    color: #ff4d6d;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.outline-btn:hover {
+    background-color: #ff4d6d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+.outline-btn.secondary {
+    border-color: #333;
+    color: #333;
+}
+
+.outline-btn.secondary:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Search Icon */
 .search-icon {
-  position: absolute;
-  top: 20px;
-  right: 7px;
-  font-size: 18px;
-  color: red; /* temporary for visibility */
-  cursor: pointer;
-  z-index: 1100;
+    position: absolute;
+    top: 16px;
+    right: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1100;
 }
-
 
 /* Search Panel */
 .search-panel {
-  position: fixed;
-  top: 0;
-  right: -100%; /* hidden initially */
-  width: 350px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
-  z-index: 1200;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.4s ease;
-  padding: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease;
+    padding: 20px;
+    z-index: 1200;
 }
 
-/* Search Panel Active */
+/* Active Panel */
 .search-panel.active {
-  right: 0;
+    right: 0;
 }
 
-/* Back Arrow and Input */
+/* Header */
 .search-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .search-header .back-arrow {
-  font-size: 28px;
-  cursor: pointer;
-  color: #333;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .search-header input {
-  flex: 1;
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  font-size: 1em;
-  outline: none;
-}
-
-/* Optional: fade the magnifier when hidden */
-.search-icon.hidden {
-  opacity: 0;
-  pointer-events: none;
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
 }
 
