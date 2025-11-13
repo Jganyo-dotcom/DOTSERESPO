@@ -1,4 +1,78 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const observerOptions = { threshold: 0.2 };
+
+  
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Animate testimonials and services
+  document.querySelectorAll('.testimonials, .services').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Animate scent cards with stagger
+  const scentCards = document.querySelectorAll('.scent-card');
+  scentCards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.2}s`; // stagger
+    observer.observe(card);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Animate contact section on scroll
+const contactSection = document.querySelector('.contact-section');
+const observerOption = { threshold: 0.2 };
+
+const contactObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOption);
+
+contactObserver.observe(contactSection);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ---------------- Modal Variables ----------------
+
 const modalButtons = document.querySelectorAll(".modal-btn");
 const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".close");
@@ -262,3 +336,79 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 slides.forEach(slide => observer.observe(slide));
+
+
+
+
+
+// Animate cards when they appear on screen
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.style.animation = 'fadeUp 1s ease forwards';
+    }
+  });
+});
+
+
+
+
+// Animate sections or cards only when they appear in the viewport
+const observerr = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // animate once
+    }
+  });
+}, { threshold: 0.2 }); // triggers when 20% of element is visible
+
+// Target elements you want to animate
+document.querySelectorAll('.card, .our-promise h2, .story-overlay').forEach(el => {
+  observerr.observe(el);
+});
+
+
+
+// Intersection Observer for Scroll Animations
+const observerOptionsss = {
+  threshold: 0.2
+};
+
+const observerrr = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+      obs.unobserve(entry.target);
+    }
+  });
+}, observerOptionsss);
+
+// Animate testimonials
+document.querySelectorAll('.testimonials, .services').forEach(el => {
+  observerrr.observe(el);
+});
+
+// Animate scent cards with stagger
+const scentCards = document.querySelectorAll('.scent-card');
+scentCards.forEach((card, i) => {
+  observer.observe(card);
+  card.style.transitionDelay = `${i * 0.2}s`;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

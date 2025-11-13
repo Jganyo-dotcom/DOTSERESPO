@@ -56,7 +56,8 @@
   <div class="search-header">
     <span class="back-arrow">&larr;</span>
     <input type="text" placeholder="Search perfumes..." />
-  </div>
+  </div><br><br>
+  <a href="#" style="font-family: Georgia, 'Times New Roman', Times, serif; color: black;font-size: larger;">Admin login</a>
 </div>
 
 
@@ -118,6 +119,109 @@
   </div>
 </section>
 
+
+<!--------------- Another-->
+
+<section class="our-promise">
+  <h2>Our Promise</h2>
+  <div class="promise-cards">
+    <div class="card">
+      <i class="fas fa-leaf"></i>
+      <h3>Pure Ingredients</h3>
+      <p>We craft each fragrance using the finest, ethically sourced natural essences.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-palette"></i>
+      <h3>Unique Blends</h3>
+      <p>Every bottle tells a different story — designed to match your individuality.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-gift"></i>
+      <h3>Elegant Packaging</h3>
+      <p>From the scent to the design, we ensure a luxurious experience in every detail.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scroll-story">
+  <div class="story-overlay">
+    <h2>The Journey of Scent</h2>
+    <p>
+      From nature’s finest flowers to elegant bottles, each fragrance captures the soul 
+      of sophistication — a whisper of emotion in every note.
+    </p>
+  </div>
+</section>
+
+
+<!------------end-->
+
+
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>"Amazing scents! I found my signature perfume here."</p>
+      <h4>- Humpty graphics.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Fast delivery and excellent customer service."</p>
+      <h4>- Elikem D.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The packaging is luxurious and smells divine!"</p>
+      <h4>- Nana Adom.</h4>
+    </div>
+  </div>
+</section>
+
+<!-- Scent Cards / Services Section -->
+<section id="services" class="services">
+  <h2>Our Signature Scents</h2>
+  <div class="scent-grid">
+    <div class="scent-card">
+      <img src="images/lovee.webp" alt="Floral Essence">
+      <h3>Floral Essence</h3>
+      <p>Fresh and elegant floral aroma</p>
+    </div>
+    <div class="scent-card">
+      <img src="images/perfume2.webp" alt="Ocean Breeze">
+      <h3>Ocean Breeze</h3>
+      <p>Refreshing aquatic scent</p>
+    </div>
+    <div class="scent-card">
+      <img src="images/perfume3.webp" alt="Luxury Night">
+      <h3>Luxury Night</h3>
+      <p>Deep, rich scent for evenings</p>
+    </div>
+    <div class="scent-card">
+      <img src="images/perfume4.webp" alt="Citrus Delight">
+      <h3>Citrus Delight</h3>
+      <p>Vibrant and zesty fragrance</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <h2>Stay Updated</h2><br>
+  <p>Join our fragrance family and get exclusive offers.</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required><br><br>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- Floating Shop Now Button -->
+<a href="#products" class="floating-btn">🛍️</a>
+
+
     <!-- Products Section -->
     <section id="products" class="products">
         <h2>Our Perfumes</h2>
@@ -177,19 +281,49 @@
     </div>
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Send us a message or visit our store.</p>
-    <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <div class="container">
+    <div class="contact-header">
+      <h2>Get in Touch</h2>
+      <p>Have questions or want to discover your signature scent? Reach out to us!</p>
+    </div>
+
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
         <button type="submit" class="btn">Send Message</button>
-    </form>
+      </form>
+
+      <!-- Optional: Store Info / Socials -->
+      <div class="contact-info">
+        <h3>Visit Our Store</h3>
+        <p>123 Perfume Lane, Accra, Ghana</p>
+        <p>Email: info@perfumeboutique.com</p>
+        <p>Phone: +233 24 000 0000</p>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-    <p>&copy; 2025 Perfume Paradise. All rights reserved.</p>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Perfume Paradise. All rights reserved.</p>
 </footer>
+
 
     <script src="script/index.js"></script>
 </body>
